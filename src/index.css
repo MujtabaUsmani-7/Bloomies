@@ -1,0 +1,58 @@
+@import "tailwindcss";
+
+@theme {
+  --font-display: "Bricolage Grotesque", ui-rounded, system-ui, sans-serif;
+  --font-sans: "Plus Jakarta Sans", system-ui, -apple-system, sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, monospace;
+}
+
+@layer base {
+  :root {
+    --bg-top: #FFF1E6;
+    --bg-bottom: #DFF5EA;
+    --pot-terracotta: #E8927C;
+    --accent-pink: #FF7EB6;
+    --accent-sky: #8EC9FF;
+    --accent-sun: #FFD93D;
+    --ink-plum: #4A3550;
+  }
+
+  html,
+  body {
+    min-height: 100%;
+    background: linear-gradient(180deg, #FFF1E6 0%, #DFF5EA 100%);
+    background-attachment: fixed;
+    color: #4A3550;
+    font-family: var(--font-sans);
+    -webkit-font-smoothing: antialiased;
+    overscroll-behavior-y: contain;
+  }
+
+  button,
+  a {
+    cursor: pointer;
+  }
+}
+
+.tabular-nums {
+  font-variant-numeric: tabular-nums;
+}
+
+@keyframes gentle-float {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-4px);
+  }
+}
+
+.animate-gentle-float {
+  animation: gentle-float 3s ease-in-out infinite;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .animate-gentle-float {
+    animation: none;
+  }
+}

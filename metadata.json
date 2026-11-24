@@ -1,0 +1,6 @@
+{
+  "name": "Bloomies",
+  "description": "Drop, merge, and grow your garden into the legendary Golden Lotus.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
